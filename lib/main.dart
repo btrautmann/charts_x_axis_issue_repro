@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_charts/chart.dart';
 import 'package:syncfusion_charts/line_chart.dart';
+import 'package:syncfusion_charts/pie_chart.dart';
 
 void main() {
   runApp(const MainApp());
@@ -17,6 +18,11 @@ class MainApp extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
+                SizedBox(height: 100),
+                AspectRatio(
+                  aspectRatio: 1,
+                  child: PieChart(),
+                ),
                 SizedBox(height: 100),
                 AspectRatio(
                   aspectRatio: 1,
