@@ -29,7 +29,13 @@ class PieChart extends StatelessWidget {
                   color: point.color ?? Colors.white,
                   borderRadius: BorderRadius.circular(6),
                 ),
-                child: Text(point.x.toString()),
+                child: Text(
+                  point.x.toString(),
+                  style: const TextStyle(
+                    fontSize: 12,
+                    color: Colors.black,
+                  ),
+                ),
               );
             },
           ),
