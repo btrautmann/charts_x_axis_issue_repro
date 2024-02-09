@@ -16,28 +16,12 @@ class PieChart extends StatelessWidget {
       series: [
         DoughnutSeries<PieChartData, String>(
           dataLabelMapper: (entry, _) => entry.id,
-          dataLabelSettings: DataLabelSettings(
+          dataLabelSettings: const DataLabelSettings(
             isVisible: true,
-            margin: const EdgeInsets.all(4),
+            margin: EdgeInsets.all(4),
             borderRadius: 6,
             labelPosition: ChartDataLabelPosition.outside,
             useSeriesColor: true,
-            builder: (data, point, series, pointIndex, seriesIndex) {
-              return Container(
-                padding: const EdgeInsets.all(4),
-                decoration: BoxDecoration(
-                  color: point.color ?? Colors.white,
-                  borderRadius: BorderRadius.circular(6),
-                ),
-                child: Text(
-                  point.x.toString(),
-                  style: const TextStyle(
-                    fontSize: 12,
-                    color: Colors.black,
-                  ),
-                ),
-              );
-            },
           ),
           animationDuration: 500,
           pointColorMapper: (datum, index) => Theme.of(context).colorScheme.secondary,
