@@ -35,6 +35,17 @@ class LineChart extends StatelessWidget {
       series: <XyDataSeries<ChartData, String>>[
         LineSeries<ChartData, String>(
           name: 'Income',
+          trendlines: [
+            Trendline(
+              type: TrendlineType.linear,
+              width: 2,
+              color: Colors.blue,
+              dashArray: <double>[5, 5],
+              opacity: 0.7,
+              name: 'Income Trendline',
+              isVisibleInLegend: false
+            ),
+          ],
           animationDuration: 750,
           width: 4,
           dataSource: incomeData,

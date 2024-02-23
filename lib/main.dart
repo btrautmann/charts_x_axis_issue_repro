@@ -19,10 +19,10 @@ class MainApp extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: 100),
-                AspectRatio(
-                  aspectRatio: 1,
-                  child: PieChart(),
-                ),
+                // AspectRatio(
+                //   aspectRatio: 1,
+                //   child: PieChart(),
+                // ),
                 SizedBox(height: 100),
                 AspectRatio(
                   aspectRatio: 1,
