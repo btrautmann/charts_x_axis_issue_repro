@@ -32,19 +32,27 @@ class LineChart extends StatelessWidget {
         enablePanning: true,
         zoomMode: ZoomMode.x,
       ),
+      trackballBehavior: TrackballBehavior(
+        hideDelay: 2000,
+        enable: true,
+        tooltipDisplayMode: TrackballDisplayMode.groupAllPoints,
+        builder: (context, details) {
+          return Text(details.toString());
+        },
+        activationMode: ActivationMode.singleTap,
+      ),
       series: <XyDataSeries<ChartData, String>>[
         LineSeries<ChartData, String>(
           name: 'Income',
           trendlines: [
             Trendline(
-              type: TrendlineType.linear,
-              width: 2,
-              color: Colors.blue,
-              dashArray: <double>[5, 5],
-              opacity: 0.7,
-              name: 'Income Trendline',
-              isVisibleInLegend: false
-            ),
+                type: TrendlineType.linear,
+                width: 2,
+                color: Colors.blue,
+                dashArray: <double>[5, 5],
+                opacity: 0.7,
+                name: 'Income Trendline',
+                isVisibleInLegend: false),
           ],
           animationDuration: 750,
           width: 4,
