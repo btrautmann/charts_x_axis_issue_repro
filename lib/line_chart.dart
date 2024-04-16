@@ -33,7 +33,6 @@ class LineChart extends StatelessWidget {
         zoomMode: ZoomMode.x,
       ),
       trackballBehavior: TrackballBehavior(
-        hideDelay: 2000,
         enable: true,
         tooltipDisplayMode: TrackballDisplayMode.groupAllPoints,
         builder: (context, details) {
